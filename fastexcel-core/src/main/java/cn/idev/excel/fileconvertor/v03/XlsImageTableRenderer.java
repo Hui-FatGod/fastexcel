@@ -39,12 +39,12 @@ public class XlsImageTableRenderer extends TableRenderer {
             Rectangle imageRect = calculateImageRectangle(clientAnchor);
             ImageData imageData = ImageDataFactory.create(picture.getPictureData().getData());
             drawContext.getCanvas().addImage(imageData,
-                    imageRect.getWidth(),
-                    0,
-                    0,
-                    imageRect.getHeight(),
-                    imageRect.getLeft(),
-                    imageRect.getTop());
+                imageRect.getWidth(),
+                0,
+                0,
+                imageRect.getHeight(),
+                imageRect.getLeft(),
+                imageRect.getTop());
         }
     }
 

@@ -51,8 +51,8 @@ public class XlsConverter extends BaseExcelConverter {
     private Cell createPdfCell(int rowspan, int colspan, org.apache.poi.ss.usermodel.Cell cell, String value, float maxWidth, String fontPath) throws IOException {
         float cellHeight = cell.getRow().getHeightInPoints() * 1.2f;
         Cell pdfCell = new Cell(rowspan, colspan)
-                .setHeight(cellHeight)
-                .setPadding(0);
+            .setHeight(cellHeight)
+            .setPadding(0);
         Text text = new Text(value);
         setPdfCellFont((HSSFCell) cell, text, fontPath);
 
@@ -125,8 +125,8 @@ public class XlsConverter extends BaseExcelConverter {
         HSSFPalette customPalette = cell.getSheet().getWorkbook().getCustomPalette();
         HSSFColor color = customPalette.getColor(colorIndex);
         Color defaultColor = (color != null && color.getIndex() != 64)
-                ? new DeviceRgb(color.getTriplet()[0], color.getTriplet()[1], color.getTriplet()[2])
-                : ColorConstants.BLACK;
+            ? new DeviceRgb(color.getTriplet()[0], color.getTriplet()[1], color.getTriplet()[2])
+            : ColorConstants.BLACK;
 
         switch (borderStyle) {
             case THIN:

@@ -15,7 +15,7 @@ public class Excel2PdfUtils {
 
     // 使用单例模式确保 SimpleDateFormat 只被创建一次
     private static final ThreadLocal<SimpleDateFormat> DATE_FORMATTER = ThreadLocal.withInitial(() ->
-            new SimpleDateFormat(DATE_FORMAT, LocaleUtil.getUserLocale())
+        new SimpleDateFormat(DATE_FORMAT, LocaleUtil.getUserLocale())
     );
 
     public static String getValue(Cell cell) {

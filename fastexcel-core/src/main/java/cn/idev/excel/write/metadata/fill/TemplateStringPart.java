@@ -1,6 +1,7 @@
 package cn.idev.excel.write.metadata.fill;
 
 import cn.idev.excel.enums.TemplateStringPartType;
+import cn.idev.excel.util.StringUtils;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -10,6 +11,8 @@ import lombok.Getter;
 @Getter
 @EqualsAndHashCode
 public class TemplateStringPart {
+    public final static TemplateStringPart EMPTY_TEXT_PART = TemplateStringPart.text(StringUtils.EMPTY);
+
     /**
      * Represents the type of this part.
      *

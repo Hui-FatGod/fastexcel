@@ -63,8 +63,8 @@ public class XlsxConverter extends BaseExcelConverter {
 
     private com.itextpdf.layout.element.Cell createPdfCell(int rowspan, int colspan, Cell cell, String value, float maxWidth, String fontPath) throws IOException {
         com.itextpdf.layout.element.Cell pdfCell = new com.itextpdf.layout.element.Cell(rowspan, colspan)
-                .setHeight(cell.getRow().getHeightInPoints() * 1.2f)
-                .setPadding(0);
+            .setHeight(cell.getRow().getHeightInPoints() * 1.2f)
+            .setPadding(0);
         Text text = new Text(value);
         setPdfCellFont((XSSFCell) cell, text, fontPath);
         Paragraph paragraph = new Paragraph(text).setPadding(0f).setMargin(0f);
@@ -80,7 +80,7 @@ public class XlsxConverter extends BaseExcelConverter {
     private void setCellStyles( XSSFCell cell,com.itextpdf.layout.element.Cell pdfCell) throws IOException {
         XSSFCellStyle cellStyle = cell.getCellStyle();
         pdfCell.setVerticalAlignment(getVerticalAlignment(cellStyle.getVerticalAlignment()))
-                .setTextAlignment(getTextAlignment(cellStyle.getAlignment(), cell.getCellType()));
+            .setTextAlignment(getTextAlignment(cellStyle.getAlignment(), cell.getCellType()));
 
         // Set borders and background color
         setBorders(pdfCell, cellStyle);
